@@ -2,7 +2,6 @@ package ru.geekbrains.lesson5;
 
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -20,9 +19,9 @@ public class HW5 {
         for (int i = 0; i < lst.size(); i++)
             if (lst.get(i).isFile()) {
                 Path output = Paths.get(lst.get(i).getName());
-                Path backup = Paths.get("./backup/"+lst.get(i).getName());
+                Path backup = Paths.get("./backup/" + lst.get(i).getName());
                 try {
-                    Files.copy(output,backup);
+                    Files.copy(output, backup);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

@@ -26,9 +26,9 @@ public class Task2 {
         int subDirTotal = 0;
         int subFileTotal = 0;
         for (int i = 0; i < files.length; i++) {
-            if (files[i].isDirectory()){
+            if (files[i].isDirectory()) {
                 subDirTotal++;
-            }else {
+            } else {
                 subFileTotal++;
             }
         }
@@ -43,23 +43,6 @@ public class Task2 {
                 subFileCounter++;
                 print(files[i], indent, subFileCounter == subFileTotal);
             }
-//
-//            int subFileTotal = 0;
-//            for (int j = 0; j < files.length; j++) {
-//                if (files[j].isFile())
-//                    subFileTotal++;
-//            }
-//
-//            int subFileCounter = 0;
-//            for (int j = 0; j < files.length; j++) {
-//                if (files[j].isFile()) {
-//                    subFileCounter++;
-//                    print(files[j], indent, subFileCounter == subFileTotal);
-//                }
-//            }
         }
     }
 }
-
-
-
